@@ -5,7 +5,6 @@ var getIngredientlistrouter =  require('./routes/getIngredients_a.js');
 var app = express();
 var path = require('path');
 var server = require('http').Server(app);
-var PORT = 5000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());
@@ -20,6 +19,6 @@ app.get('/index', function(req, res){
 app.get('/', function(req, res){
     res.json({'status':'success'});
 });
-app.listen(PORT, function () {
-  console.log('Listening on port ' + PORT);
+app.listen(process.env.PORT || 3000, function () {
+  console.log('Listening on port ' + 3000);
 });
