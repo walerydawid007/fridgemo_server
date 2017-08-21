@@ -14,6 +14,12 @@ app.use(bodyParser.urlencoded({
 }));
 app.use('/api', getfoodlistrouter);
 app.use('/api', getIngredientlistrouter);
+app.get('/index', function(req, res){
+    res.json({'status':'success'});
+});
+app.get('/', function(req, res){
+    res.json({'status':'success'});
+});
 app.listen(PORT, function () {
   console.log('Listening on port ' + PORT);
 });
