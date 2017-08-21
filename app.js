@@ -2,7 +2,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var getfoodlistrouter =  require('./routes/getfoodlist.js');
 var getIngredientlistrouter =  require('./routes/getIngredients_a.js');
-var multer = require('multer');
 var app = express();
 var path = require('path');
 var server = require('http').Server(app);
