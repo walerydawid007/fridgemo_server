@@ -14,9 +14,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use('/api', getfoodlistrouter);
 app.use('/api', getIngredientlistrouter);
-app.get('/', function(req, res, next){
-    res.sendStatus(200);
-});
 app.listen(PORT, function () {
   console.log('Listening on port ' + PORT);
 });
